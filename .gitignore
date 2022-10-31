@@ -141,3 +141,7 @@ all.config
 # fetched Android config fragments
 kernel/configs/android-*.cfg
 
+# Zenka
+/AnyKernel3
+/Toolchains
+/Zip
