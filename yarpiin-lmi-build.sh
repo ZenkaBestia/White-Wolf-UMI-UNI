@@ -89,7 +89,7 @@ function make_lmi_zip {
 		cd $KERNELFLASHER_DIR
 		zip -r9 `echo $YARPIIN_LMI_VER`.zip *
                 mkdir $ZIP_MOVE
-		mv  `echo $YARPIIN_LMI_VER`.zip $ZIP_MOVE/`echo $YARPIIN_LMI_VER-$(date +"%d%m%y")`.zip
+		mv  `echo $YARPIIN_LMI_VER`.zip $ZIP_MOVE/`echo $YARPIIN_LMI_VER-$(date +"%d%m%y-%H%M")`.zip
 		cd $KERNEL_DIR
 }
 
