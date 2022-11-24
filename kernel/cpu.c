@@ -2343,7 +2343,7 @@ EXPORT_SYMBOL(__cpu_active_mask);
 struct cpumask __cpu_isolated_mask __read_mostly;
 EXPORT_SYMBOL(__cpu_isolated_mask);
 
-#if CONFIG_LITTLE_CPU_MASK
+#ifdef CONFIG_LITTLE_CPU_MASK
 static const unsigned long lp_cpu_bits = CONFIG_LITTLE_CPU_MASK;
 const struct cpumask *const cpu_lp_mask = to_cpumask(&lp_cpu_bits);
 #else
@@ -2351,7 +2351,7 @@ const struct cpumask *const cpu_lp_mask = cpu_possible_mask;
 #endif
 EXPORT_SYMBOL(cpu_lp_mask);
 
-#if CONFIG_BIG_CPU_MASK
+#ifdef CONFIG_BIG_CPU_MASK
 static const unsigned long perf_cpu_bits = CONFIG_BIG_CPU_MASK;
 const struct cpumask *const cpu_perf_mask = to_cpumask(&perf_cpu_bits);
 #else
@@ -2359,7 +2359,7 @@ const struct cpumask *const cpu_perf_mask = cpu_possible_mask;
 #endif
 EXPORT_SYMBOL(cpu_perf_mask);
 
-#if CONFIG_PRIME_CPU_MASK
+#ifdef CONFIG_PRIME_CPU_MASK
 static const unsigned long prime_cpu_bits = CONFIG_PRIME_CPU_MASK;
 const struct cpumask *const cpu_prime_mask = to_cpumask(&prime_cpu_bits);
 #else
