@@ -145,3 +145,6 @@ kernel/configs/android-*.cfg
 /AnyKernel3
 /Toolchains
 /Zip
+
+# NetHunter
+/kali-nethunter-kernel
